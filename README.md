@@ -8,7 +8,7 @@ This repository accompanies the paper *From REA Diagrams to Synthetic Datasets: 
       <img src="custom_gpt_editor1.png" width="450"><br>
       <em>(a) Top section of the custom GPT configuration interface.</em>
     </td>
-    <td align="center">
+        <td align="center">
       <img src="custom_gpt_editor2.png" width="450"><br>
       <em>(b) Lower section of the custom GPT configuration interface.</em>
     </td>
