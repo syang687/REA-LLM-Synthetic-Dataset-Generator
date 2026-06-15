@@ -53,4 +53,4 @@ The REA theory is kept in the knowledge file and the operational contract and ob
 
 ## Citation
 
-> [Author(s)]. (2026). *From REA Diagrams to Synthetic Datasets: Leveraging Large Language Models to Enhance Accounting Education.* [Journal / working paper.]
+> [Author(s)]. (2026). *From REA Diagrams to Synthetic Datasets: Leveraging Large Language Models to Enhance Accounting Education.* [Working Paper.]
