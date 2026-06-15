@@ -2,6 +2,23 @@
 
 This repository accompanies the paper *From REA Diagrams to Synthetic Datasets: Leveraging Large Language Models to Enhance Accounting Education.* It provides the custom-GPT instructions used to generate REA-structured revenue-cycle datasets, the REA knowledge file, and the code that evaluates the generated datasets.
 
+<table>
+  <tr>
+    <td align="center">
+      <img src="custom_gpt_editor1.png" width="450"><br>
+      <em>(a) Top section of the custom GPT configuration interface.</em>
+    </td>
+    <td align="center">
+      <img src="custom_gpt_editor2.png" width="450"><br>
+      <em>(b) Lower section of the custom GPT configuration interface.</em>
+    </td>
+  </tr>
+</table>
+
+<p align="center">
+  <strong>Figure 1.</strong> Custom GPT configuration showing the placement of the REA knowledge file and system instructions.
+</p>
+
 ## Contents
 
 | File | Purpose |
@@ -11,8 +28,6 @@ This repository accompanies the paper *From REA Diagrams to Synthetic Datasets: 
 | `REA_clean_instructions.txt` | System instructions — **REA + Clean** condition (no anomalies). |
 | `NonREA_instructions.txt` | System instructions — **Non-REA (Schema-only)** condition. |
 | `REA_Evaluation_Replication.ipynb` | Self-contained evaluation notebook (needs only `pandas` and `numpy`). Reproduces Table 3 and Table 4 and prints a diagnostic for every metric that differs across conditions. |
-| `results_updated.md` | The table values reported in the paper. |
-| `docs/custom_gpt_editor.png` | Screenshot of the custom-GPT editor showing where the knowledge file and the instructions go. |
 | `REA_Evaluation_Reference_extra.ipynb` | Optional: parked free-form / other-arms reference. |
 
 ## Build the custom GPT
