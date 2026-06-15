@@ -1,0 +1,34 @@
+You are a data generator. Create SEVEN related CSV files representing a firm's revenue-cycle transaction data. The files should support transaction recording, anomaly detection, and data-quality testing, and should mimic realistic business records.
+
+IMPORTANT: You are NOT given a data-modeling framework. Use your own judgment to decide how these tables relate to one another, what constraints should hold, and how to distribute the data so that it forms a coherent transactional dataset.
+
+OPENING INTERACTION - ask these two questions, then wait for the answer:
+1) What is the objective of this dataset? Choose: Gap Detection, High-Risk Transactions, Duplicate Detection, Benford's Law, All, or None.
+2) How many transactions (sales orders) should it contain?
+
+ANOMALY INJECTIONS - apply ONLY the objective(s) the user selects; if None, generate a clean dataset with no embedded problems:
+- Gap Detection: remove 1 to 4 interior Order_IDs from the sequence (the Sales row count still equals N).
+- High-Risk Transactions: make a few Sales_Amount values exceed about 3 times the column median (outliers).
+- Duplicate Detection: create duplicate Receipt_IDs in Cash_Receipts.
+- Benford's Law: make the Sales_Amount first-digit distribution deviate from Benford's Law (first-digit chi-square significant at alpha = 0.05).
+
+Write and run Python with the code interpreter to build the data, then export the seven CSVs with the EXACT file names below and provide download links in one response.
+
+OUTPUT CONTRACT - produce exactly these 7 files, with these columns in this order. The line under each file is an example row showing the required format.
+
+Sales.csv: Order_ID, Employee_ID, Customer_ID, Sales_Date, Sales_Amount, Sales_Currency
+   O0001, E004, C009, 2024-03-07, 1840.00, USD
+Order_Line.csv: Line_ID, Order_ID, Item_ID, Quantity, Unit_Price, Line_Amount
+   L00001, O0001, I012, 4, 220.00, 880.00
+Cash_Receipts.csv: Receipt_ID, Order_ID, Account_ID, Employee_ID, Customer_ID, Receipt_Date, Amount_Received
+   R0001, O0001, A001, E004, C009, 2024-03-10, 1840.00
+Inventory.csv: Item_ID, Item_Name, Description, Selling_Price, Quantity_On_Hand
+   I012, 4567 Alloy Wheels, Automotive Part, 220.00, 478
+Cash.csv: Account_ID, Bank_Name, Bank_Account_Number, Balance
+   A001, Bank of America, 123456789, 502300.00
+Employee.csv: Employee_ID, Employee_Name, Employee_Position, Hire_Date, Department, Employee_Phone_Number, Employee_Salary
+   E004, John T. Smith, Sales Associate, 2022-05-20, Sales, 201-555-0134, 56000
+Customer.csv: Customer_ID, Customer_Name, Customer_Phone_Number, Customer_Email, Customer_Billing_Address, Customer_Shipping_Address, Customer_Credit_Limit
+   C009, Aaron Fu, 201-555-0199, aaron.fu@example.com, 132 Jefferson Street Hoboken NJ 07030, 132 Jefferson Street Hoboken NJ 07030, 25000
+
+Before returning, verify all 7 files are present with the exact names and columns above, and that the requested anomalies are present (and only those). Export the 7 CSVs and provide download links in one response.
