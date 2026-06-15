@@ -28,7 +28,6 @@ This repository accompanies the paper *From REA Diagrams to Synthetic Datasets: 
 | `REA_clean_instructions.txt` | System instructions — **REA + Clean** condition (no anomalies). |
 | `NonREA_instructions.txt` | System instructions — **Non-REA (Schema-only)** condition. |
 | `REA_Evaluation_Replication.ipynb` | Self-contained evaluation notebook (needs only `pandas` and `numpy`). Reproduces Table 3 and Table 4 and prints a diagnostic for every metric that differs across conditions. |
-| `REA_Evaluation_Reference_extra.ipynb` | Optional: parked free-form / other-arms reference. |
 
 ## Build the custom GPT
 
